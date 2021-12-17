@@ -41,7 +41,7 @@ body {
       align-items: center;
       flex-direction: row;
       .signup-form {
-        margin: 1rem 1rem 2rem 1rem;
+        margin: 1rem;
         .form-title {
           font-weight: 700;
           font-size: 1.6rem;
@@ -525,7 +525,7 @@ body {
 /* about page style */
 
 .user_profile {
-  margin: 5rem;
+  margin: 1rem;
   cursor: pointer;
   position: relative;
 
@@ -591,6 +591,7 @@ body {
       .row {
         margin-bottom: -1rem;
         .label_div {
+          margin-bottom: 1rem;
           height: 2rem;
           label {
             color: rgb(40, 85, 87);

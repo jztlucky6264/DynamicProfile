@@ -113,7 +113,7 @@ router.get("/about", authenticate, (req, res) => {
 
 /*get user data for contact us and home page  */
 router.get("/getdata", authenticate, (req, res) => {
-  console.log("Hello world from the server about");
+  console.log("Hello world from the server contact");
   if (!req.body.rootUser) {
     return res.send("server error");
   }

@@ -13,17 +13,14 @@ app.use(express.json());
 // we link the router files to make our route easy
 app.use(require("./router/auth"));
 
-const PORT = process.env.PORT || 5000;
-
+const PORT = process.env.PORT || 3001;
 app.get("/signin", (req, res) => {
   res.send("Hello world from the server signup");
 });
 app.get("/service", (req, res) => {
   res.send("Hello world from the server services");
 });
-app.get("/contact", (req, res) => {
-  res.send("Hello world from the server contact");
-});
+
 /* app.get("/about", middleware, (req, res) => {
   res.send("Hello world frodasvcm the server about");
 }); */

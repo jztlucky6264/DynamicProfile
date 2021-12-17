@@ -22,7 +22,7 @@ const Contact = () => {
         },
       });
       const data = await res.json();
-      console.log(data);
+
       setUserData({
         name: data.name,
         email: data.email,
@@ -35,7 +35,7 @@ const Contact = () => {
       }
     } catch (error) {
       console.log(error);
-      history.push("/login");
+      //history.push("/login");
     }
   };
   useEffect(() => {
@@ -113,13 +113,13 @@ const Contact = () => {
 
       <form
         method="POST"
-        className=" user_form row  g-3 mt-5 mx-auto mb-3 container needs-validation"
+        className=" user_form row  g-3 mt-5 mx-auto mb-3 container-fluid needs-validation"
         noValidate
       >
         <div className="col-md-4">
           <input
             type="text"
-            className="form-control"
+            className="form-control text-center "
             id="validationCustom01"
             name="name"
             onChange={handleInputs}
@@ -132,7 +132,7 @@ const Contact = () => {
         <div className="col-md-4">
           <input
             type="text"
-            className="form-control"
+            className="form-control text-center"
             id="validationCustom02"
             name="phone"
             onChange={handleInputs}
@@ -143,20 +143,18 @@ const Contact = () => {
           <div className="valid-feedback">Looks good!</div>
         </div>
         <div className="col-md-4">
-          <div className="input-group has-validation">
-            <input
-              type="text"
-              className="form-control"
-              id="validationCustomUsername"
-              aria-describedby="inputGroupPrepend"
-              name="email"
-              onChange={handleInputs}
-              value={userData.email}
-              placeholder="Your Email"
-              required
-            />
-            <div className="invalid-feedback">Please choose a username.</div>
-          </div>
+          <input
+            type="text"
+            className="form-control text-center"
+            id="validationCustomUsername"
+            aria-describedby="inputGroupPrepend"
+            name="email"
+            onChange={handleInputs}
+            value={userData.email}
+            placeholder="Your Email"
+            required
+          />
+          <div className="invalid-feedback">Please choose a username.</div>
         </div>
         <div className="form-group">
           <textarea

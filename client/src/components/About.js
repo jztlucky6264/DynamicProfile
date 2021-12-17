@@ -4,7 +4,6 @@ import { useHistory } from "react-router-dom";
 const About = () => {
   const history = useHistory();
   const [userData, setUserData] = useState({});
-
   const callaboutPage = async () => {
     try {
       const res = await fetch("/about", {
@@ -16,7 +15,6 @@ const About = () => {
         credentials: "include",
       });
       const data = await res.json();
-      console.log(data);
       setUserData(data);
 
       if (!res.ok === 200) {
@@ -25,7 +23,7 @@ const About = () => {
       }
     } catch (error) {
       console.log(error);
-      history.push("./login");
+      // history.push("/login");
     }
   };
   useEffect(() => {
@@ -104,7 +102,7 @@ const About = () => {
           <div className="row btn_row">
             <div className="col-8 mb-2 ">
               <input
-                type="submit"
+                type="button"
                 name="btnAddMore"
                 className="profile-edit-btn w-100"
                 value="Edit Profile"
@@ -136,86 +134,86 @@ const About = () => {
               <div className="tab-content" id="myTabContent">
                 <div id="home" className="tab-pane  in active">
                   <div className="row">
-                    <div className="col-6 label_div ">
+                    <div className="col-4 label_div ">
                       <label> User ID</label>
                     </div>
-                    <div className="col-6  para_div ">
+                    <div className="col-4  para_div ">
                       <p>{userData._id}</p>
                     </div>
                   </div>
 
                   <div className="row">
-                    <div className="col-6 label_div">
+                    <div className="col-4 label_div">
                       <label> Name</label>
                     </div>
-                    <div className="col-6 ">
+                    <div className="col-4 ">
                       <p>{userData.name}</p>
                     </div>
                   </div>
                   <div className="row">
-                    <div className="col-6 label_div">
+                    <div className="col-4 label_div">
                       <label>Email</label>
                     </div>
-                    <div className="col-6 ">
+                    <div className="col-4 ">
                       <p>{userData.email}</p>
                     </div>
                   </div>
                   <div className="row">
-                    <div className="col-6 label_div">
+                    <div className="col-4 label_div">
                       <label>Phone</label>
                     </div>
-                    <div className="col-6 ">
+                    <div className="col-4 ">
                       <p>{userData.phone}</p>
                     </div>
                   </div>
                   <div className="row">
-                    <div className="col-6 label_div">
+                    <div className="col-4 label_div">
                       <label>Profession</label>
                     </div>
-                    <div className="col-6 ">
+                    <div className="col-4 ">
                       <p>{userData.work}</p>
                     </div>
                   </div>
                 </div>
                 <div id="profile" className="tab-pane fade ">
                   <div className="row">
-                    <div className="col-6 label_div">
+                    <div className="col-4 label_div">
                       <label> Experince</label>
                     </div>
-                    <div className="col-6 ">
+                    <div className="col-4 ">
                       <p>Five Year</p>
                     </div>
                   </div>
 
                   <div className="row">
-                    <div className="col-6 label_div">
+                    <div className="col-4 label_div">
                       <label> Name</label>
                     </div>
-                    <div className="col-6 ">
+                    <div className="col-4 ">
                       <p>Lucky yadav</p>
                     </div>
                   </div>
                   <div className="row">
-                    <div className="col-6 label_div">
+                    <div className="col-4 label_div">
                       <label> Experince</label>
                     </div>
-                    <div className="col-6 ">
+                    <div className="col-4 ">
                       <p>Five Year</p>
                     </div>
                   </div>
                   <div className="row">
-                    <div className="col-6 label_div">
+                    <div className="col-4 label_div">
                       <label> Members</label>
                     </div>
-                    <div className="col-6 ">
+                    <div className="col-4 ">
                       <p>Tewenty</p>
                     </div>
                   </div>
                   <div className="row">
-                    <div className="col-6 label_div">
+                    <div className="col-4 label_div">
                       <label> company</label>
                     </div>
-                    <div className="col-6 ">
+                    <div className="col-4 ">
                       <p>Xword</p>
                     </div>
                   </div>
@@ -223,120 +221,6 @@ const About = () => {
               </div>
             </div>
           </div>
-
-          {/*    <div className="row">
-            <div className=" col-4">
-              <div className="profile-work">
-                <a
-                  href="https://github-users-profile.vercel.app/"
-                  target="_lucky"
-                >
-                  Youtuber
-                </a>
-                <br />
-                <a
-                  href="https://github-users-profile.vercel.app/"
-                  target="_lucky"
-                >
-                  Web Developer
-                </a>
-                <br />
-                <a
-                  href="https://github-users-profile.vercel.app/"
-                  target="_lucky"
-                >
-                  Instagram
-                </a>
-                <br />
-                <a
-                  href="https://github-users-profile.vercel.app/"
-                  target="_lucky"
-                >
-                  Facebook
-                </a>
-                <br />
-                <a
-                  href="https://github-users-profile.vercel.app/"
-                  target="_lucky"
-                >
-                  Mern Developer
-                </a>
-                <br />
-              </div>
-            </div>
-            <div className="col-8 pt-5 about_info">
-              <div className="tab-content" id="myTabContent">
-                <div
-                  id="home"
-                  class="tab-pane fade in active"
-                  role="tabpanel"
-                  aria-labelledby="home-tab"
-                >
-                  <div className="row">
-                    <div className="col-md-8">
-                      <label> User ID</label>
-                    </div>
-                    <div className="col-md-4  ">
-                      <p>wkjduiy7</p>
-                    </div>
-                  </div>
-
-                  <div className="row">
-                    <div className="col-md-6">
-                      <label> Name</label>
-                    </div>
-                    <div className="col-md-6">
-                      <p>Lucky yadav</p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  id="profile"
-                  class="tab-pane fade in active"
-                  role="tabpanel"
-                  aria-labelledby="profile-tab"
-                >
-                  <div className="row">
-                    <div className="col-md-6">
-                      <label> Experince</label>
-                    </div>
-                    <div className="col-md-6">
-                      <p>Five Year</p>
-                    </div>
-                  </div>
-
-                  <div className="row">
-                    <div className="col-md-6">
-                      <label> Name</label>
-                    </div>
-                    <div className="col-md-6">
-                      <p>Lucky yadav</p>
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-md-6">
-                      <label> Experince</label>
-                    </div>
-                    <div className="col-md-6">
-                      <p>Five Year</p>
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-md-6">
-                      <label> Members</label>
-                    </div>
-                    <div className="col-md-6">
-                      <p>Tewenty</p>
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-md-6">
-                      <label> company</label>
-                    </div>
-                    <div className="col-md-6">Xword </div>
-                  </div>
-                </div>
-              </div> */}
         </form>
       </div>
     </>
