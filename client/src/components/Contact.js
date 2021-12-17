@@ -156,7 +156,7 @@ const Contact = () => {
           />
           <div className="invalid-feedback">Please choose a username.</div>
         </div>
-        <div className="form-group">
+        <div className="form-group col-md-12 mx-auto  col-8">
           <textarea
             name="message"
             onChange={handleInputs}
