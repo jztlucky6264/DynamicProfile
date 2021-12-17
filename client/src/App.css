@@ -48,7 +48,7 @@ body {
             flex-direction: row;
   }
   .signup_container .signup-content .signup-form {
-    margin: 1rem;
+    margin: 1rem 0rem;
   }
   .signup_container .signup-content .signup-form .form-title {
     font-weight: 700;
@@ -533,7 +533,7 @@ body {
 
 /* about page style */
 .user_profile {
-  margin: 1rem;
+  margin: 4rem 0rem;
   cursor: pointer;
   position: relative;
 }

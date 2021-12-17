@@ -113,10 +113,10 @@ const Contact = () => {
 
       <form
         method="POST"
-        className=" user_form row  g-3 mt-5 mx-auto mb-3 container-fluid needs-validation"
+        className=" user_form row  g-3 mt-5 mx-auto mb-3 container needs-validation"
         noValidate
       >
-        <div className="col-md-4">
+        <div className="col-md-4 mx-auto gx-4 col-8">
           <input
             type="text"
             className="form-control text-center "
@@ -129,7 +129,7 @@ const Contact = () => {
           />
           <div className="valid-feedback">Looks good!</div>
         </div>
-        <div className="col-md-4">
+        <div className="col-md-4 gx-4 mx-auto col-8">
           <input
             type="text"
             className="form-control text-center"
@@ -142,7 +142,7 @@ const Contact = () => {
           />
           <div className="valid-feedback">Looks good!</div>
         </div>
-        <div className="col-md-4">
+        <div className="col-md-4 mx-auto gx-4 col-8">
           <input
             type="text"
             className="form-control text-center"
